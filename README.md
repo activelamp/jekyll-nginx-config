@@ -85,3 +85,17 @@ past_urls:
 
 Hello, world! ...
 ```
+
+#### CLI overrides
+
+You can specify proxy host and proxy port settings through the command line. You can use this if you wish to override the values hard-coded in your configuration file:
+
+```
+jekyll nginx_config --proxy_host=staging-static.youradress.com --proxy_host=8080 > staging-redirects.conf
+```
+
+The command also take the same set of options as `jekyll build`, like `--source`, `--config`, `--drafts`, etc. They mean the same thing in this command as they do in `jekyll build`.
+
+You can also specify your own Liquid template file to use if you wish to have complete control on the resulting nginx config file. Use `--config_template <PATH TO LIQUID TEMPLATE>`.
+
+
