@@ -24,8 +24,8 @@ module Jekyll
           site = ::Jekyll::Site.new(options)
           return nil unless site.config['nginx']
 
-          site.config['nginx']['proxy_host'] = options['proxy_host'] || site.config['nginx']['proxy_host']
-          site.config['nginx']['proxy_port'] = options['proxy_port'] || site.config['nginx']['proxy_port']
+          site.config['nginx']['proxy_host'] = options['proxy_host'] || site.config['nginx']['proxy_host'] || ''
+          site.config['nginx']['proxy_port'] = options['proxy_port'] || site.config['nginx']['proxy_port'] || ''
 
           unless site.config['nginx']['proxy_host'].length > 0
             Jekyll.logger.error 'You must at least specify `proxy_host`.'
