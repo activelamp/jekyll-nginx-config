@@ -9,8 +9,12 @@ that you are using.
 Add this to your `Gemfile`:
 
 ```
-gem 'jekyll-nginx-config'
+group :jekyll_plugins do
+  gem 'jekyll-nginx-config'
+end
 ```
+
+> You have to specify it under the `:jekyll_plugins` group otherwise Jekyll won't recognize the `nginx_config` command.
 
 Then run `bundle isntall`.
 
