@@ -8,7 +8,7 @@ that you are using.
 
 Add this to your `Gemfile`:
 
-```
+```ruby
 group :jekyll_plugins do
   gem 'jekyll-nginx-config'
 end
